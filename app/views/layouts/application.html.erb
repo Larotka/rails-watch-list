@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <div class="navbar d-flex justify-content-between">
+      <img src="https://picsum.photos/40/40" alt="avatar" class="avatar">
+      <div style="margin-right: 50px;">
+        <%= link_to "new List", new_list_path, class: "btn btn-light" %>
+        <%= link_to "My Lists", lists_path, class: "btn btn-light" %>
+      </div>
+    </div>
+    <div class="space"></div>
+
     <%= yield %>
   </body>
 </html>

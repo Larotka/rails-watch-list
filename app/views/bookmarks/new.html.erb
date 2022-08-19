@@ -1,0 +1,19 @@
+<div class="bannier">
+  <h1>New bookmark</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <%= simple_form_for [@list, @bookmark], :html=> { class: 'new-bookmark-form col-8 mx-auto pt-4' } do |f| %>
+      <%= f.hidden_field :list_id, :value => params[:list_id] %>
+      <div>
+        <% f.label :comment%>
+        <%= f.input :comment %>
+      </div>
+      <div>
+        <%= f.association :movie %>
+      </div>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

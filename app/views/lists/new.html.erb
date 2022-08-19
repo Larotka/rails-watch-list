@@ -1,0 +1,18 @@
+<div class="bannier">
+  <h1>New List</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <%= simple_form_for @list, :html=> { class: 'new-bookmark-form col-8 mx-auto pt-4' } do |f| %>
+      <%= f.input :name, :label => 'Your list name please' %>
+      <div>
+        <% f.label :image_url%>
+        <%= f.input :image_url%>
+      </div>
+      <div class="row">
+        <%= f.button :submit, :class => "col-4 mx-auto"%>
+      </div>
+    <% end %>
+  </div>
+</div>
