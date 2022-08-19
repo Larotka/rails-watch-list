@@ -6,7 +6,7 @@
   <div class="row">
     <% @lists.each do |list| %>
       <%= link_to list_path(list), class: "list-title-click col-4 mb-4" do %>
-        <div class="d-flex justify-content-center align-items-center card-list-index" style="background-image: url(<%= list.image_url%>);"><h1 style="text-align: center;"><%= list.name %></h1></div>
+        <div class="d-flex justify-content-center align-items-center card-list-index" style="background-image: url(<%=cl_image_path, list.photo.key%>);"><h1 style="text-align: center;"><%= list.name %></h1></div>
       <% end %>
   <% end %>
   </div>
