@@ -7,7 +7,7 @@
     <%= simple_form_for @list, :html=> { class: 'new-bookmark-form col-8 mx-auto pt-4' } do |f| %>
       <%= f.input :name, :label => 'Your list name please' %>
       <div>
-        <%= f.input :image_url%>
+        <%= f.input :photo, as: :file %>
       </div>
       <div class="row">
         <%= f.button :submit, :class => "col-4 mx-auto"%>
